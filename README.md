@@ -2,7 +2,7 @@
 
 This repository should contain the code needed to replicate the main claims in the paper. Specifically, it simulates the defense on the BigEnough dataset (in the website fingerprinting setting) and on the DeepCoFFEA dataset (in the flow correlation setting). The datasets are provided here in .zip format.
 
-The experiments were done on Ubuntu 20.04 using python 3.8 and an RTX 3090 (CUDA version 11.7). The website fingerprinting experiment takes about four hours to run on this hardware, with most of the time spent training the defense generator. The flow correlation experiment completes in about an hour. Both experiments used the full 24GB of VRAM with the default batch sizes. The dependencies can be installed with 'pip3 install -r requirements.txt'. 
+The experiments were done on Ubuntu 20.04 using python 3.8 and an RTX 3090 (CUDA version 11.7). The website fingerprinting experiment takes about four hours to run on this hardware, with most of the time spent training the defense generator. The flow correlation experiment completes in about an hour. Both experiments used the full 24GB of VRAM with the default batch sizes. The dependencies can be installed with 'pip3 install -r requirements.txt`.
 
 We included our python packages in requirements.txt (though the most important packages are numpy and pytorch).  
 
