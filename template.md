@@ -2,7 +2,7 @@
 
 Paper title: DeTorrent: An Adversarial Padding-only Traffic Analysis Defense
 
-Artifacts HotCRP Id: This paper is #114 at the PoPETS 2024.1 HotCRP (I don't believe I've been assigned an artifact HotCRP ID yet). 
+Artifacts HotCRP Id: This paper is #114 at the PoPETS 2024.1 HotCRP and submission #16 for the artifacts HotCRP.
 
 Requested Badge: Available (I've provided datasets, code, and instructions to allow for other researchers to replicate the paper's main claims and build off the work. However, running them requires specialized hardware, and it's difficult to provide a portable VM that could be guaranteed to work with the reviewer's available GPU. So, I don't necessarily expect the reviewers to fully replicate the results). 
 
