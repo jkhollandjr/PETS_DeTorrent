@@ -52,22 +52,16 @@ If the environment is not correct, then python should provide errors about missi
 
 ### Main Results and Claims
 
-#### Main Result 1: Name
+#### Main Result 1: Simulated DeTorrent defense in the website fingerprinting setting
 
 The first claim is that DeTorrent is a strong website fingerprinting defense. To demonstrate this, we train the DeTorrent defense on the BigEnough dataset and create a defense generator that can be used to simulate DeTorrent. Then, we output the defended traces, which can be used as input to website fingerprinting attacks (with the expectation that attack performance will be significantly reduced). See section 5.2 in the paper for details and section 6.1 for results.
 
-#### Main Result 2: Name
+#### Main Result 2: Simulated DeTorrent defense in the flow correlation setting
 
 The second claim is that DeTorrent can be used to defend against flow correlation. Accordingly, we train the defense on the attached DeepCoFFEA dataset and output a defended version. This version can then be used by the DeepCoFFEA attack to see the reduction in attack performance. See section 5.3 in the paper for details and section 7 for results.
 ...
 
 ### Experiments
-List each experiment the reviewer has to execute. Describe:
- - How to execute it in detailed steps.
- - What the expected result is.
- - How long it takes and how much space it consumes on disk. (approximately)
- - Which claim and results does it support, and how.
-
 
 #### Experiment 1: Name
 ```bash
