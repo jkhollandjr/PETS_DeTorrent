@@ -1,15 +1,16 @@
-This repository should contain the code needed to replicate the main claims in the paper.
+## DeTorrent: An Adversarial Padding-only Traffic Analysis
 
-There are two primary experiments - one for the website fingerprinting setting and one for the flow correlation setting. 
+This repository should contain the code needed to replicate the main claims in the paper. Specifically, it simulates the defense on the BigEnough dataset (in the website fingerprinting setting) and on the DeepCoFFEA dataset (in the flow correlation setting). The datasets are provided here in .zip format.
 
-The experiments were done on Ubuntu 20.04 using python 3.8 and an RTX 3090 (CUDA version 11.7). Other requirements can be found in requirements.txt.
+The experiments were done on Ubuntu 20.04 using python 3.8 and an RTX 3090 (CUDA version 11.7). The website fingerprinting experiment takes about four hours to run on this hardware, with most of the time spent training the defense generator. The flow correlation experiment completes in about an hour. The dependencies can be installed with 'pip3 install -r requirements.txt'. 
+
+We included our python packages in requirements.txt (though the most important packages are numpy and pytorch).  
 
 If you'd like to make changes to script behavior (such as padding volume, choice of dataset, or CUDA device), then you'll find the relevant python variables near the file headers. 
 
-
 ### To run the website fingerprinting experiment:
 
-To simplify the experiment, we provide wf_experiment.sh, which will simulate WF-DeTorrent on the BigEnough dataset. Note that the dataset is formatted such that the filenames include the website and instance number (e.g. website 10-50 is the 50th instance of the 10th website). Each file contains the metadata for a trace, where the left column includes the timestamps and the right column includes the cell size (where negative sizes represent download cells, and positive sizes represent upload cells).
+To simplify the experiment, we provide wf_experiment.sh, which will simulate WF-DeTorrent on the BigEnough dataset. Note that the dataset is formatted such that the filenames include the website and instance number (e.g. website 10-50 is the 50th instance of the 10th website). Each file contains the metadata for a trace, where the left column includes the timestamps and the right column includes the cell size (where negative sizes represent download cells, and positive sizes represent upload cells). We only provide the data collected with Tor in the standard setting (as opposed to safer or safest), thought the full dataset is available at 'https://drive.google.com/drive/folders/1hRPbhkrjzBKNolzfkS1yuFtSvwtjKSJT'. 
 
 First, wf_preprocessing.py will preprocess the data into .npy files and store them in wf_preprocessed_data. Note that we split the dataset 5 ways (similar to a 5-fold cross-validation). This lets us train a model on one portion of the dataset and defend the other portion (thus avoiding data leakage).
 
